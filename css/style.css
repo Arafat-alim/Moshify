@@ -111,7 +111,7 @@ a {
   font-size: 1.5rem;
 }
 
-/* !Mobile Responsize */
+/* !Desktop Responsize */
 @media screen and (min-width: 1024px) {
   .badge {
     font-size: 1.5rem;
@@ -119,5 +119,34 @@ a {
 
   .badge--small {
     font-size: 1.2rem;
+  }
+}
+
+/* lists */
+.lists {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-heading);
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/*! for desktop responsive */
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
   }
 }
