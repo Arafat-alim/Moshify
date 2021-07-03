@@ -7,7 +7,6 @@
   --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
-
 }
 
 *,
@@ -89,7 +88,6 @@ a {
 
 .link-arrow:hover::after {
   margin-left: 10px;
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -194,7 +192,6 @@ a {
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
-
 }
 
 .btn--primary {
@@ -240,6 +237,11 @@ a {
 .btn--block {
   display: inline-block;
   width: 100%;
+}
+
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -290,7 +292,6 @@ a {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
-
 }
 
 .card__header,
@@ -355,7 +356,6 @@ a {
   right: 5%;
 }
 
-
 /* media  */
 .media {
   display: flex;
@@ -372,7 +372,6 @@ a {
 .media__image {
   margin-top: 1rem;
 }
-
 
 @media screen and (min-width: 1024px) {
   .plan__name {
@@ -397,7 +396,7 @@ a {
   font-size: 3rem;
   font-style: italic;
   line-height: 1.3;
-  color: var(--color-body-darker)
+  color: var(--color-body-darker);
 }
 
 .quote__text::before {
@@ -459,5 +458,44 @@ a {
   .grid--cols-3 {
     /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* CallOuts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+.callout--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+/*! Callout for Computer and tab screen  */
+@media screen and (min-width: 768px) {
+  .callout .grid--cols-2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
