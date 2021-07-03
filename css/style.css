@@ -168,6 +168,9 @@ a {
 .icon--primary {
   fill: var(--color-primary);
 }
+.icon--white {
+  fill: #fff;
+}
 
 /* ! making a circle to my element */
 .icon-container {
@@ -498,4 +501,39 @@ a {
     justify-self: start;
     margin: 0 2rem;
   }
+}
+
+/* collapsible */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  /* display: none; */
+  /* ! Tips */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  display: block;
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
