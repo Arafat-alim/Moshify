@@ -32,6 +32,7 @@ h2,
 h3 {
   color: var(--color-heading);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -564,7 +565,7 @@ a {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 .block--skewed-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
@@ -633,5 +634,30 @@ nav {
   }
   .nav__list {
     border: 0;
+  }
+}
+
+/* Hero */
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+/* ! for tablet and pc responsive */
+
+@media screen and (min-width: 786px) {
+  .hero__content {
+    text-align: left;
+    align-self: center;
+    padding-top: 0;
   }
 }
