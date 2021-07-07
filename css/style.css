@@ -1,6 +1,6 @@
 :root {
-  --color-primary: #2534ff;
-  --color-secondary: #22d9ff;
+  --color-secondary: #2534ff;
+  --color-primary: #22d9ff;
   --color-accent: #ff3400;
   --color-heading: #1b0760;
   --color-body: #918ca4;
@@ -321,11 +321,19 @@ a {
   color: #fff;
 }
 
-.card--secondary .badge--secondary {
+.card--primary .badge--primary {
   background: #02cdf1;
 }
 
+.card--secondary .badge--secondary {
+  background: #126de4;
+}
+
 /* plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
 .plan__name {
   color: #fff;
   margin: 0;
@@ -355,6 +363,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -366,6 +378,13 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 /* media  */
@@ -697,4 +716,14 @@ nav {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
-} ;
+}
+
+/* Plans Block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
